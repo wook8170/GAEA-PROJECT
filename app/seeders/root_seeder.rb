@@ -193,7 +193,7 @@ class RootSeeder < Seeder
       if raise_on_unknown_language
         raise "Locale #{desired_lang} is not supported"
       else
-        desired_lang = :en
+        desired_lang = :ko
       end
     end
 

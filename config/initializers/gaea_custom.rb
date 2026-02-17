@@ -14,6 +14,18 @@ Rails.application.config.after_initialize do
       # 엔터프라이즈 배너 숨기기 및 관리 페이지 비활성화
       Setting.ee_hide_banners = true
       Setting.ee_manager_visible = false
+
+      # 기존 관리자 계정 언어 및 타임존 강제 변경
+      admin = User.find_by(login: 'admin')
+      if admin
+        admin.update_columns(language: 'ko') if admin.language != 'ko'
+        # time_zone 직접 변경은 UserPreference를 통해야 함
+        pref = admin.pref
+        if pref.time_zone != 'Seoul'
+          pref.time_zone = 'Seoul'
+          pref.save
+        end
+      end
     end
   rescue => e
     Rails.logger.error "GAEA-PROJECT 초기화 중 오류 발생: #{e.message}"
