@@ -349,7 +349,7 @@ module Settings
         default: false
       },
       default_language: {
-        default: "en",
+        default: "ko",
         allowed: -> { Redmine::I18n.all_languages }
       },
       default_projects_modules: {
@@ -380,7 +380,7 @@ module Settings
       },
       development_highlight_enabled: {
         description: "Enable highlighting of development environment",
-        default: -> { Rails.env.development? },
+        default: false,
         format: :boolean
       },
       diff_max_lines_displayed: {
@@ -436,12 +436,12 @@ module Settings
       },
       ee_manager_visible: {
         description: "Show the Enterprise configuration page",
-        default: true,
+        default: false,
         writable: false
       },
       ee_hide_banners: {
         description: "Hide the Enterprise enterprise banners",
-        default: false
+        default: true
       },
       enable_internal_assets_server: {
         description: "Serve assets through the Rails internal asset server",
@@ -1215,7 +1215,7 @@ module Settings
         ].freeze
       },
       user_default_timezone: {
-        default: nil,
+        default: "Seoul",
         format: :string,
         allowed: ActiveSupport::TimeZone.all.map { |tz| tz.tzinfo.canonical_identifier }.sort.uniq + [nil]
       },

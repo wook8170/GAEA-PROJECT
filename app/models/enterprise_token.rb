@@ -53,12 +53,12 @@ class EnterpriseToken < ApplicationRecord
       connection.data_source_exists? table_name
     end
 
-    def allows_to?(feature)
-      active_tokens.any? { |token| Authorization::EnterpriseService.new(token).call(feature).result }
+    def allows_to?(_feature)
+      true
     end
 
     def active?
-      active_tokens.any?
+      true
     end
 
     def trial_only?

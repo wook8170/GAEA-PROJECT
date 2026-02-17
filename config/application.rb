@@ -71,7 +71,7 @@ module OpenProject
     # Configuration for the application, engines, and railties goes here.
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
-    # config.time_zone = "Central Time (US & Canada)"
+    config.time_zone = "Seoul"
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Do not require `belongs_to` associations to be present by default.
@@ -157,7 +157,7 @@ module OpenProject
 
     # Add locales from crowdin translations to i18n
     config.i18n.load_path += Dir[Rails.root.join("config/locales/crowdin/*.{rb,yml}").to_s]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :ko
     # Fall back to default locale
     config.i18n.fallbacks = true
 
