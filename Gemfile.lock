@@ -91,7 +91,7 @@ PATH
   specs:
     openproject-bim (1.0.0)
       activerecord-import
-      rubyzip (>= 2.3, < 2.5)
+      rubyzip (>= 2.3, < 3.3)
 
 PATH
   remote: modules/boards
@@ -1369,7 +1369,7 @@ GEM
     ruby2_keywords (0.0.5)
     rubytree (2.2.0)
       json (~> 2.0, > 2.9)
-    rubyzip (2.4.1)
+    rubyzip (3.2.2)
     safety_net_attestation (0.5.0)
       jwt (>= 2.0, < 4.0)
     sanitize (7.0.0)
@@ -2218,7 +2218,7 @@ CHECKSUMS
   ruby-saml (1.18.1) sha256=1b0e7a44aef150b4197955f5e015d593672e242cfdc5d06aa7554ec2350b9107
   ruby2_keywords (0.0.5) sha256=ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef
   rubytree (2.2.0) sha256=e312dc1ed814153583b57d9662e6caac1fd60830886a571b48bb06daef906eb6
-  rubyzip (2.4.1) sha256=8577c88edc1fde8935eb91064c5cb1aef9ad5494b940cf19c775ee833e075615
+  rubyzip (3.2.2) sha256=c0ed99385f0625415c8f05bcae33fe649ed2952894a95ff8b08f26ca57ea5b3c
   safety_net_attestation (0.5.0) sha256=c8cd01dd550dbe8553862918af6355a04672db11d218ec96104ce3955293f2aa
   sanitize (7.0.0) sha256=269d1b9d7326e69307723af5643ec032ff86ad616e72a3b36d301ac75a273984
   scimitar (2.14.0) sha256=93b29132ebd50d78e61d56c8a17406b1c01857448f2d075560fd6c7660ac9aa9
