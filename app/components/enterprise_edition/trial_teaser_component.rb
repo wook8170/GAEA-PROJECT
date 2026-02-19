@@ -53,7 +53,7 @@ module EnterpriseEdition
     end
 
     def render?
-      User.current.admin? && EnterpriseToken.trial_only?
+      false
     end
 
     def token

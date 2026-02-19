@@ -11,9 +11,24 @@ Rails.application.config.after_initialize do
       # 개발 환경 하이라이트 비활성화
       Setting.development_highlight_enabled = false
       
-      # 엔터프라이즈 배너 숨기기 및 관리 페이지 비활성화
+      # 전역 설정 강제 주입
       Setting.ee_hide_banners = true
       Setting.ee_manager_visible = false
+      
+      # 엔터프라이즈 토큰 클래스 패치 (모든 기능 해제)
+      class << EnterpriseToken
+        def allows_to?(_feature)
+          true
+        end
+
+        def active?
+          true
+        end
+
+        def hide_banners?
+          true
+        end
+      end
 
       # 기존 관리자 계정 언어 및 타임존 강제 변경
       admin = User.find_by(login: 'admin')

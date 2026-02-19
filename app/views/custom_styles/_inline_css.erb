@@ -80,4 +80,28 @@ See COPYRIGHT and LICENSE files for more details.
     }
     <% end %>
     <% end %>
+    <%# Hide Enterprise upsell / stickers / banners / badges %>
+    .op-enterprise-banner,
+    .enterprise-edition-teaser,
+    .ee-only-icon,
+    .upsell-colored-text,
+    .upsell-colored,
+    .upsell-colored-background,
+    .upsell-actions,
+    .icon-enterprise,
+    .icon-ee,
+    .ee-icon,
+    .enterprise-trial-status,
+    .ee-status,
+    .ee-badge,
+    .ee-only-label,
+    #op-enterprise-banner-teaser,
+    [data-test-selector="op-enterprise-banner"],
+    .backlogs-share-enterprise-sticker,
+    .backlogs-share-badge,
+    .share-modal--enterprise-sticker,
+    .share-modal--ee-badge,
+    .widget-box.upsell {
+        display: none !important;
+    }
 </style>
