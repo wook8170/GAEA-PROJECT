@@ -218,7 +218,7 @@ jobs:
           sed -i 's/vendor\/bundle//g' .dockerignore
       - name: Build image
         id: build
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           platforms: ${{ matrix.platform }}
@@ -263,7 +263,7 @@ jobs:
             --platform "${{ matrix.platform }}"
       - name: Push image
         id: push
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           platforms: ${{ matrix.platform }}
